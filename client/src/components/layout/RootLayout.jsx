@@ -10,7 +10,6 @@ const RootLayout = () => {
     <Outlet />
     <ServicesTag />
     <Footer />
-
     </>
   )
 }

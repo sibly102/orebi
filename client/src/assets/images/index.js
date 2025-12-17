@@ -25,6 +25,9 @@ import table from "./products/table.webp";
 import watch from "./products/watch.webp";
 import avatar from "./products/avatar.png";
 import contactUs from "./contactUs.jpg";
+import saleImgOne from "./sale/saleImgOne.jpg";
+import saleImgTwo from "./sale/saleImgTwo.jpg";
+import saleImgThree from "./sale/saleImgThree.jpg";
 
 export {
   logo,
@@ -53,4 +56,10 @@ export {
   watch,
   avatar,
   contactUs,
+
+  //sale
+  saleImgOne,
+  saleImgTwo,
+  saleImgThree,
+
 };
