@@ -3,9 +3,10 @@ import { logo } from "../assets/images";
 import Title from "./Title";
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { serverUrl } from "../../confiq";
 
 const Login = ({ setToken }) => {
-  const serverUrl = import.meta.env.VITE_BACKEND_URL;
+  
   console.log(serverUrl)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,8 +18,13 @@ const Login = ({ setToken }) => {
             email,
             password,
           });
-          const data = response;
-          console.log(data)
+          const data = response?.data;
+          if(data?.success){
+             setToken(data?.token)
+             toast.success(data?.message)
+          }else{
+            toast.error(data?.message)
+          }
         } catch (error) {
           console.log("Login Error", error)
           toast.error(error?.message);

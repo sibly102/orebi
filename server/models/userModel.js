@@ -17,6 +17,9 @@ const userSchema = new mongoose.Schema({
       type: String,
       default: null,
     },
+    isAdmin: {
+      type: Boolean,
+    },
     userCart: {
         type: Object,
         default: {}
